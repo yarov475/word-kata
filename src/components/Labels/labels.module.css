@@ -1,0 +1,8 @@
+.label{
+    background-color: #240e79;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,6 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+    background-color: #15094b;
+    height: 100%;
+}

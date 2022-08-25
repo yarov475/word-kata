@@ -1,25 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
+import Glossary from "./components/Glosssary/Glossary";
+import InputText from "./components/InputTExt/InputText";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [word, setWord] = useState("");
+    const [meanings, setMeanings] = useState([]);
+
+
+    /**
+     * send word to free dictionary api
+     * https://api.dictionaryapi.dev/
+     * push translated word to state
+         * @returns {Promise<void>}
+     */
+
+const dictionaryApi = async () => {
+    try {
+      const data = await axios.get(
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+      );
+      setMeanings(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+// TODO delete log
+  console.log(meanings + ' from app.js');
+
+    /**
+     * use efect react hook
+     * when input walue changes it evoke dictionaryApi
+     * with new word
+     */
+  useEffect(() => {
+    dictionaryApi();
+  }, [word]);
+
+    return (
+        <div className="App">
+            <Glossary
+                setMeanings={setMeanings}
+                meanings={meanings}
+                setWord={setWord}
+                word={word}
+            />
+
+        </div>
+    );
 }
 
 export default App;

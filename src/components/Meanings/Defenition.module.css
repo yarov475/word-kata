@@ -1,0 +1,23 @@
+.items{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.item{
+
+    background:linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);
+    border-right: 20px;
+}
+.item button{
+    background:linear-gradient(135deg, #F5515F 0%,#A1051D 100%);
+  border-radius: 60px;
+}
+.def{
+    color:red;
+}
+.ex{
+    color: green;
+}
+.syn{
+    color: #041e23;
+}
