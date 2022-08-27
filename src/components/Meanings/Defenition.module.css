@@ -5,7 +5,8 @@
 }
 .item{
 
-    background:linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);
+    /*background:linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);*/
+    background: #ffffff;
     border-right: 20px;
 }
 .item button{

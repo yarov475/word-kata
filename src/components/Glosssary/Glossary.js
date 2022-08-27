@@ -22,7 +22,7 @@ export default function Glossary({setWord,meanings, word, setMeanings}) {
 
     return (
         <>
-            <Header/>
+
             <Labels/>
             <div className={s.main}>
 
@@ -31,6 +31,7 @@ export default function Glossary({setWord,meanings, word, setMeanings}) {
                     setWord={setWord}
                     word={word}
                 />
+
 
                 <Definitions_TEST
                     setWord = {setWord}
@@ -41,7 +42,7 @@ export default function Glossary({setWord,meanings, word, setMeanings}) {
 
             </div>
 
-            <Footer/>
+
 
         </>
     )

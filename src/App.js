@@ -4,6 +4,8 @@ import Glossary from "./components/Glosssary/Glossary";
 import InputText from "./components/InputTExt/InputText";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import Header from "./components/Header/Heder";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const [word, setWord] = useState("");
@@ -41,12 +43,14 @@ const dictionaryApi = async () => {
 
     return (
         <div className="App">
+            <Header/>
             <Glossary
                 setMeanings={setMeanings}
                 meanings={meanings}
                 setWord={setWord}
                 word={word}
             />
+            <Footer/>
 
         </div>
     );

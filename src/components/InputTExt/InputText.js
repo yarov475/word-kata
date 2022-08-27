@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import s from './InputText.module.css'
 export default function InputText({setWord, word}) {
 
-    let initText = 'Insert text here'
+    let initText = 'Text'
     const handleTExt = (e) => {
         e.preventDefault()
         const text = e.target.elements.textToanalize.value;

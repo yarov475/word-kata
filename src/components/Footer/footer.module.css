@@ -2,6 +2,6 @@
     background-color: #090423;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
