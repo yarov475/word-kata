@@ -9,7 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
     const [word, setWord] = useState('');
-    const [meanings, setMeanings] = useState([]);
+    const [meaningsArr, setMeanings] = useState([]);
 
 
     /**
@@ -24,13 +24,13 @@ const dictionaryApi = async () => {
       const data = await axios.get(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
-      setMeanings(data.data);
+      setMeanings((p)=>[...p,data.data]);
+      // console.log(data.data+'data data')
     } catch (error) {
       console.log(error);
     }
   };
-// TODO delete log
-  console.log(meanings + ' from app.js');
+
 
     /**
      * use efect react hook
@@ -46,7 +46,7 @@ const dictionaryApi = async () => {
             <Header/>
             <Glossary
                 setMeanings={setMeanings}
-                meanings={meanings}
+                meaningsArr={meaningsArr}
                 setWord={setWord}
                 word={word}
             />
