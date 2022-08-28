@@ -8,7 +8,7 @@ import Header from "./components/Header/Heder";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-    const [word, setWord] = useState('');
+    const [words, setWords] = useState([]);
     const [meaningsArr, setMeanings] = useState([]);
 
 
@@ -19,7 +19,7 @@ function App() {
          * @returns {Promise<void>}
      */
 
-const dictionaryApi = async () => {
+const dictionaryApi = async (word) => {
     try {
       const data = await axios.get(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
@@ -38,8 +38,8 @@ const dictionaryApi = async () => {
      * with new word
      */
   useEffect(() => {
-    dictionaryApi();
-  }, [word]);
+    words.map((word)=>{dictionaryApi(word)});
+  }, [words]);
 
     return (
         <div className="App">
@@ -47,8 +47,8 @@ const dictionaryApi = async () => {
             <Glossary
                 setMeanings={setMeanings}
                 meaningsArr={meaningsArr}
-                setWord={setWord}
-                word={word}
+                setWords={setWords}
+                words={words}
             />
             <Footer/>
 

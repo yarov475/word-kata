@@ -1,16 +1,18 @@
 import React, {useState} from "react";
 import s from './InputText.module.css'
-export default function InputText({setWord, word}) {
+import findTopWords from "../findtopWords/findTopWords";
+export default function InputText({setWords, words}) {
 
-    let initText = 'Text'
+    let initText = 'Text to analise'
     /**
      * set one word to fetch fn
      * @param e
      */
     const handleTExt = (e) => {
         e.preventDefault()
-        const text = e.target.elements.textToanalize.value;
-        setWord(text)
+        const str = e.target.elements.textToanalize.value;
+        let listArr = findTopWords(str)
+        setWords(listArr)
     }
 
     return (

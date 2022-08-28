@@ -8,7 +8,7 @@ import s from './Glossary.module.css'
 import Footer from "../Footer/Footer";
 import Labels from "../Labels/Labels";
 
-export default function Glossary({setWord,meaningsArr, word, setMeanings}) {
+export default function Glossary({setWords,meaningsArr, words, setMeanings}) {
 
     return (
         <>
@@ -18,17 +18,19 @@ export default function Glossary({setWord,meaningsArr, word, setMeanings}) {
 
 
                 <InputText
-                    setWord={setWord}
-                    word={word}
+                    setWords={setWords}
+                    words={words}
                 />
 
-
-                <Definitions_TEST
-                    setWord = {setWord}
+<div>
+    <Definitions_TEST
+                    setWords = {setWords}
                     setMeanings = {setMeanings}
                     meaningsArr={meaningsArr}
-                    word={word}
+                    words={words}
                 />
+</div>
+
 
             </div>
 
