@@ -3,6 +3,10 @@ import s from './InputText.module.css'
 export default function InputText({setWord, word}) {
 
     let initText = 'Text'
+    /**
+     * set one word to fetch fn
+     * @param e
+     */
     const handleTExt = (e) => {
         e.preventDefault()
         const text = e.target.elements.textToanalize.value;

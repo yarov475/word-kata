@@ -8,7 +8,7 @@ import Header from "./components/Header/Heder";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-    const [word, setWord] = useState("");
+    const [word, setWord] = useState('');
     const [meanings, setMeanings] = useState([]);
 
 

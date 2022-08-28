@@ -10,16 +10,6 @@ import Labels from "../Labels/Labels";
 
 export default function Glossary({setWord,meanings, word, setMeanings}) {
 
-    // const dictionaryApi = async () => {
-    //     try {
-    //         const data = await axios.get(
-    //             `https://api.dictionaryapi.dev/api/v2/entries/${word}`
-    //         );
-    //         setMeanings(data.data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-
     return (
         <>
 

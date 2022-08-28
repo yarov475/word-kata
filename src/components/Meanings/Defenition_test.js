@@ -2,6 +2,7 @@ import React from "react";
 import s from './Defenition.module.css'
 
 const Definitions_TEST = ({word, meanings}) => {
+    console.log(meanings + ' def test')
 
     return (
         <div>
