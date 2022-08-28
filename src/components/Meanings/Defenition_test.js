@@ -15,10 +15,10 @@ const Definitions_TEST = ({word, meaningsArr}) => {
                     <div className={s.item}>
                         {/* audio---------------------------- */}
 
-                        {`${meanings[0].word}  ${meanings[0].phonetic} `}
+                       {meanings[0].word&&meanings[0].word}  {meanings[0].phonetic&&meanings[0].phonetic}
 
 
-                        { <audio
+                        { meanings[0].phonetics[0] && meanings[0].phonetics[0].audio&&<audio
                                 style={{backgroundColor: "#fff", borderRadius: 10}}
                                 src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
                                 controls

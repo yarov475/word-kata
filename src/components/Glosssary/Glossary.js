@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 import axios from "axios";
-import Definitions from "../Meanings/Defenition";
+
 import InputText from "../InputTExt/InputText";
-import Header from "../Header/Heder";
+
 import Definitions_TEST from "../Meanings/Defenition_test";
 import s from './Glossary.module.css'
-import Footer from "../Footer/Footer";
+
 import Labels from "../Labels/Labels";
 
 export default function Glossary({setWords,meaningsArr, words, setMeanings}) {
